@@ -11,7 +11,7 @@ def insert_into_db(msg):
 
 consumer = KafkaConsumer('topic1',
                          group_id='my-group',
-                         bootstrap_servers=['10.233.104.3:9092'])
+                         bootstrap_servers=['10.233.43.121:9092'])
 for message in consumer:
       print (message.value)
       insert_into_db(message.value)
