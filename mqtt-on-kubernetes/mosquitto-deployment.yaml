@@ -21,9 +21,11 @@ spec:
         - containerPort: 9001
         - containerPort: 1883
         volumeMounts:
-        - name: mosquitto-data
-          mountPath: /srv/mqtt/data
+        - name: nfs
+          mountPath: /usr/share/mqtt/data
       volumes:
-      - name: mosquitto-data
+      - name: nfs
         persistentVolumeClaim:
           claimName: mosquitto-data
+          # persistentVolumeClaim:
+          #claimName: mosquitto-data

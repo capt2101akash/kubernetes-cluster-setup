@@ -4,8 +4,10 @@ metadata:
   name: mosquitto-data
 spec:
   capacity:
-    storage: 50Mi
+    storage: 2G
   accessModes:
     - ReadWriteOnce
-  hostPath:
-    path: "/mnt/data"
+  nfs:
+    server: 10.233.12.137
+            #hostPath:
+    path: "/exports"
