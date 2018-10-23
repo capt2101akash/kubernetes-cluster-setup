@@ -24,19 +24,20 @@ def on_message(client, userdata, msg):
   if msg.payload:
     print(msg.payload.decode())
     kafka_publish(msg.payload.decode())
+    #client.disconnect()
 
     
 client = mqtt.Client()
 
-client.connect("192.168.31.241",1883,60)
+client.connect("35.185.1.98",31500,60)
 client.loop_start()
 client.on_connect = on_connect
 client.on_message = on_message
 try:
     while True:
         time.sleep(0.1)
-
+        #client.loop_stop()
 except KeyboardInterrupt:
-    print "exiting"
+    print("exiting")
     client.disconnect()
-    client.loop_stop() 
+#client.loop_stop() 

@@ -7,10 +7,12 @@ metadata:
     name: mosquitto
 spec:
   ports:
-  - port: 1883
+  - port: 80
     name: mqtt-port
     protocol: TCP
+    targetPort: 1883
   selector:
     app: mosquitto
     id: "1"
   type: LoadBalancer
+  #loadBalancerIP: 35.229.39.135 

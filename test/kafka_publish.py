@@ -1,10 +1,10 @@
 from kafka import KafkaProducer
 from kafka.errors import KafkaError
 
-producer = KafkaProducer(bootstrap_servers=['10.233.104.3:9092'])
+producer = KafkaProducer(bootstrap_servers=['35.185.1.98:32698'])
 
 # Asynchronous by default
-future = producer.send('topic1', b'raw_bytes')
+future = producer.send('topic1', 'hello')
 
 # Block for 'synchronous' sends
 try:

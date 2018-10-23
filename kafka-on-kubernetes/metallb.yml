@@ -6,7 +6,10 @@ metadata:
 data:
   config: |
     address-pools:
-    - name: default
+    - name: my-ip-space
       protocol: layer2
       addresses:
-      - 192.168.31.240-192.168.31.250
+      - 35.196.230.81/32
+      - 35.185.1.98/32 
+      - 35.196.15.47/32       
+
